@@ -1,0 +1,35 @@
+.nav-property{
+    height: auto;
+    color: aliceblue;
+
+}
+
+.form-property{
+    height: auto;
+}
+@media only screen and (min-width: 992px) {
+    .more{
+        display:none;
+    }
+    div.scroll {
+        padding:4px;
+        width: 500px;
+        height: 105vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align:justify;
+    }
+
+}
+
+@media only screen and (max-width: 991px) {
+    .more{
+        display:block;
+       
+    }
+    .nav-property{
+        height: auto;
+        color: aliceblue;
+    
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="E:\ic project\bootsrap 4\project-1\js\all.js"></script>
+<script src="../static/Home.js"></script>
+    <title>User Sign Up</title>
+</head>
+<body>
+    <section>
+        
+        <div class="container-fluid occupy">
+            {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+    
+        {% endfor %}
+            <div class="row height justify-content-center align-items-center">
+                <div class="card border-danger mb-3" style="width: 45rem; border-width: 2px;border-radius:10px;">
+                        <div class="card-body">
+                            <h4 class="card-title text-center p-2" style="font-size:40px">Sign Up</h4>
+                            <form action="" method="POST">
+                                <!-- email -->
+                                <div class="form-group row">
+                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                                    <div class="col-sm-10">
+                                      <input type="email" class="form-control" name="username" id="inputEmail3" placeholder="Email" required>
+                                    </div>
+                                  </div>
+
+                                <!-- password -->
+                                <div class="form-group row">
+                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="password" required>     
+                                    </div>
+                                  </div>
+
+                                  <!-- conform password -->
+                                  <div class="form-group row">
+                                    <label for="inputPassword3" class="col-sm-2 col-form-label">confirm</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" name="cpassword" id="cpassword" placeholder="confirm password" required>     
+                                    </div>
+                                  </div>
+                                  <center>
+                                      <!-- <input class="btn btn-outline-primary px-5"  type="submit" value="Sign Up" id="button" onclick="validatepass()"> -->
+                                <button class="btn btn-outline-primary px-5"  id="button" onclick="validatepass()">Sign Up</button>
+                            </center>
+                            </form>
+                        </div>
+                        <div class="card-footer text-muted text-center">
+                            Already have an account?
+                            <a href="./index.html">Login</a>
+                        </div>
+            </div>
+        </div>  
+        </div>   
+    </section>
+
+</body>
+</html>
